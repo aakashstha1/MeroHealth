@@ -19,12 +19,10 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
 
-    profile: {
-        profilePhoto: {
-          type: String,
-          default: "",
-        },
-      },
+    report: {
+      filePath: { type: String },
+      originalName: { type: String },
+    },
   },
   { timestamps: true }
 );

@@ -1,13 +1,12 @@
 import { User } from "../models/user.model.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-// import getDataUri from "../utils/dataUri.js";
-// import cloudinary from "../utils/cloudinary.js";
+import getDataUri from "../utils/dataUri.js";
+import cloudinary from "../utils/cloudinary.js";
 
 //Register
 export const register = async (req, res) => {
   try {
-    //Get the data from form
     const { fullname, email, phoneNumber, password } = req.body;
     // console.log(fullname, email, phoneNumber, password);
     if (!fullname || !email || !phoneNumber || !password) {
@@ -15,10 +14,6 @@ export const register = async (req, res) => {
         .status(400)
         .json({ message: "Something is missing!", success: false });
     }
-
-    // const file = req.file;
-    // const fileUri = getDataUri(file);
-    // const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
 
     //Check if user with the provided email exist or not
     const user = await User.findOne({ email });
@@ -171,5 +166,71 @@ export const updateProfile = async (req, res) => {
     });
   } catch (error) {
     console.log(error);
+  }
+};
+
+//Upload report
+export const uploadReport = async (req, res) => {
+  try {
+    const file = req.file;
+
+    // Validate if a file is uploaded
+    if (!file) {
+      return res.status(400).json({
+        message: "No file uploaded. Please upload a valid file.",
+        success: false,
+      });
+    }
+
+    // Convert file to data URI
+    const fileUri = getDataUri(file);
+
+    // Determine file type (image or PDF)
+    const isImage = file.mimetype.startsWith("image/");
+    const uploadOptions = isImage
+      ? {} // Default options for images
+      : { resource_type: "raw" }; // Use "raw" for non-image files
+
+    // Upload to Cloudinary
+    const cloudResponse = await cloudinary.uploader.upload(
+      fileUri.content,
+      uploadOptions
+    );
+
+    // Retrieve user ID from middleware authentication
+    const userID = req.id; // Assume middleware sets req.id
+    console.log("User ID:", userID);
+
+    // Fetch user from the database
+    let user = await User.findById(userID);
+    if (!user) {
+      return res.status(404).json({
+        message: "User not found.",
+        success: false,
+      });
+    }
+
+    // Update user profile with file details
+    user.report.filePath = cloudResponse.secure_url;
+    user.report.originalName = file.originalname;
+
+    // Save updated user
+    await user.save();
+
+    // Send success response
+    return res.status(200).json({
+      message: "File uploaded successfully.",
+      success: true,
+      data: {
+        fileUrl: user.report.filePath,
+        originalName: user.report.originalName,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({
+      message: "Internal server error.",
+      success: false,
+    });
   }
 };
