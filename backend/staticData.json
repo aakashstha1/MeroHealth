@@ -1,0 +1,111 @@
+[
+    {
+      "name": "City Hospital",
+      "location": "123 Main St, Cityville, Country",
+      "departments": ["Emergency", "Cardiology", "Pediatrics", "Orthopedics"],
+      "medical_staff": ["Dr. John Smith (Cardiologist)", "Dr. Jane Doe (Pediatrician)", "Dr. Richard Roe (Orthopedist)"],
+      "facilities": ["ICU", "MRI", "X-ray", "CT Scan", "Pharmacy"],
+      "patient_services": ["Inpatient", "Outpatient", "Surgical Care", "Diagnostic Testing"],
+      "contact_info": {"phone": "+123456789", "email": "contact@cityhospital.com", "website": "http://www.cityhospital.com"},
+      "emergency_services": true,
+      "visiting_hours": "9 AM - 7 PM",
+      "image": "hospital1.jpg"
+    },
+    {
+      "name": "Greenfield Medical Center",
+      "location": "456 Oak Rd, Greenfield, Country",
+      "departments": ["Neurology", "Orthopedics", "Emergency", "Dermatology"],
+      "medical_staff": ["Dr. Emily White (Neurologist)", "Dr. David Black (Orthopedist)", "Dr. Susan Green (Dermatologist)"],
+      "facilities": ["Surgical Theater", "MRI", "X-ray", "Pharmacy", "Blood Bank"],
+      "patient_services": ["Inpatient", "Outpatient", "Emergency Care", "Maternity"],
+      "contact_info": {"phone": "+987654321", "email": "info@greenfieldmed.com", "website": "http://www.greenfieldmed.com"},
+      "emergency_services": true,
+      "visiting_hours": "10 AM - 6 PM",
+      "image": "hospital2.jpg"
+    },
+    {
+      "name": "Sunrise Healthcare",
+      "location": "789 Pine St, Sunrise City, Country",
+      "departments": ["Cardiology", "Neurosurgery", "Pediatrics", "Rehabilitation"],
+      "medical_staff": ["Dr. Michael Lee (Cardiologist)", "Dr. Alice Adams (Neurosurgeon)", "Dr. Nora King (Pediatrician)"],
+      "facilities": ["ICU", "MRI", "Rehabilitation Center", "Pediatric Ward", "Surgical Theater"],
+      "patient_services": ["Inpatient", "Outpatient", "Cardiac Care", "Rehabilitation"],
+      "contact_info": {"phone": "+111222333", "email": "support@sunrisehealth.com", "website": "http://www.sunrisehealth.com"},
+      "emergency_services": true,
+      "visiting_hours": "8 AM - 8 PM",
+      "image": "hospital3.jpg"
+    },
+    {
+      "name": "Lakeside Hospital",
+      "location": "101 River St, Lakeside Town, Country",
+      "departments": ["Gastroenterology", "Emergency", "Surgery", "Maternity"],
+      "medical_staff": ["Dr. Sarah Davis (Gastroenterologist)", "Dr. Henry Stone (Surgeon)", "Dr. Karen White (Obstetrician)"],
+      "facilities": ["Surgical Rooms", "Emergency Room", "ICU", "Pharmacy", "Maternity Ward"],
+      "patient_services": ["Inpatient", "Outpatient", "Emergency Care", "Maternity"],
+      "contact_info": {"phone": "+444555666", "email": "contact@lakesidehospital.com", "website": "http://www.lakesidehospital.com"},
+      "emergency_services": true,
+      "visiting_hours": "9 AM - 7 PM",
+      "image": "hospital4.jpg"
+    },
+    {
+      "name": "Mountain View Medical",
+      "location": "202 Mountain Rd, Highpoint, Country",
+      "departments": ["Orthopedics", "Cardiology", "Radiology", "Endocrinology"],
+      "medical_staff": ["Dr. Charles Black (Orthopedist)", "Dr. Linda Green (Cardiologist)", "Dr. Olivia White (Endocrinologist)"],
+      "facilities": ["X-ray", "CT Scan", "MRI", "Endocrine Lab", "Pharmacy"],
+      "patient_services": ["Inpatient", "Outpatient", "Surgical Care", "Diagnostics"],
+      "contact_info": {"phone": "+555666777", "email": "info@mountainviewmed.com", "website": "http://www.mountainviewmed.com"},
+      "emergency_services": true,
+      "visiting_hours": "8 AM - 6 PM",
+      "image": "hospital1.jpg"
+    },
+    {
+      "name": "Riverside Medical Center",
+      "location": "123 Riverside Ave, Rivertown, Country",
+      "departments": ["Psychiatry", "Pediatrics", "Emergency", "Orthopedics"],
+      "medical_staff": ["Dr. John Brown (Psychiatrist)", "Dr. Mary Black (Pediatrician)", "Dr. Lisa Harris (Orthopedist)"],
+      "facilities": ["Psychiatric Ward", "Surgical Theater", "Emergency Room", "X-ray", "Pharmacy"],
+      "patient_services": ["Inpatient", "Outpatient", "Psychiatric Care", "Emergency Care"],
+      "contact_info": {"phone": "+333444555", "email": "contact@riversidemedical.com", "website": "http://www.riversidemedical.com"},
+      "emergency_services": true,
+      "visiting_hours": "10 AM - 8 PM",
+      "image": "hospital2.jpg"
+    },
+    {
+      "name": "Silver Oak Hospital",
+      "location": "789 Silver Rd, Oakwood, Country",
+      "departments": ["Emergency", "Surgery", "Gynecology", "Cardiology"],
+      "medical_staff": ["Dr. Robert Lee (Surgeon)", "Dr. Patricia Green (Gynecologist)", "Dr. Steven Black (Cardiologist)"],
+      "facilities": ["Surgical Rooms", "ICU", "Cardiology Lab", "Pharmacy", "Emergency Services"],
+      "patient_services": ["Inpatient", "Outpatient", "Surgical Care", "Maternity"],
+      "contact_info": {"phone": "+222333444", "email": "info@silveroakhospital.com", "website": "http://www.silveroakhospital.com"},
+      "emergency_services": true,
+      "visiting_hours": "9 AM - 5 PM",
+      "image": "hospital3.jpg"
+    },
+    {
+      "name": "Fairview Medical Clinic",
+      "location": "34 Fairview St, Fairview City, Country",
+      "departments": ["Family Medicine", "Pediatrics", "Cardiology", "Dermatology"],
+      "medical_staff": ["Dr. Lisa Davis (Family Medicine)", "Dr. George White (Pediatrician)", "Dr. Julia Green (Dermatologist)"],
+      "facilities": ["Outpatient Care", "Pharmacy", "Cardiology Lab", "X-ray", "Blood Testing"],
+      "patient_services": ["Outpatient", "Diagnostics", "Routine Care", "Emergency Care"],
+      "contact_info": {"phone": "+123987654", "email": "contact@fairviewclinic.com", "website": "http://www.fairviewclinic.com"},
+      "emergency_services": false,
+      "visiting_hours": "9 AM - 6 PM",
+      "image": "hospital4.jpg"
+    },
+    {
+      "name": "Westside Health Center",
+      "location": "567 Westside Blvd, Westfield, Country",
+      "departments": ["Orthopedics", "Pediatrics", "Emergency", "Radiology"],
+      "medical_staff": ["Dr. Brian Moore (Orthopedist)", "Dr. Helen Lewis (Pediatrician)", "Dr. Alan Scott (Radiologist)"],
+      "facilities": ["Emergency Room", "Surgical Rooms", "Radiology Lab", "X-ray", "Pharmacy"],
+      "patient_services": ["Inpatient", "Outpatient", "Surgical Care", "Emergency Care"],
+      "contact_info": {"phone": "+999888777", "email": "contact@westsidehealth.com", "website": "http://www.westsidehealth.com"},
+      "emergency_services": true,
+      "visiting_hours": "8 AM - 8 PM",
+      "image": "hospital1.jpg"
+    }
+  ]
+  
